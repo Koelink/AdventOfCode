@@ -1,7 +1,6 @@
 def get_file(file_name):
     with open(file_name) as f:
-        data = f.read().splitlines()
-    data = [int(x) for x in data]
+        data = [int(x) for x in f.readlines()]
     return(data)
 
 
@@ -21,6 +20,7 @@ def main():
     answer_1, answer_2 = get_puzzle_answer(data)
     print("answer 1:", answer_1)
     print("answer 2:", answer_2)
+
 
 if __name__ == "__main__":
     main()
