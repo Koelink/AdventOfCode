@@ -1,3 +1,5 @@
+# https://adventofcode.com/2020/day/4
+
 def get_file(file_name):
     with open(file_name) as f:
         data = f.read().split("\n\n")
