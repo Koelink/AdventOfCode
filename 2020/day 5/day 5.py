@@ -20,7 +20,6 @@ def get_own_id(seat_list):
 
 
 def get_puzzle_answer(data):
-    answer_1, answer_2 = 0, 0
     seat_list = [get_seat_id(x) for x in data]
     answer_1 = max(seat_list)
     answer_2 = get_own_id(seat_list)
