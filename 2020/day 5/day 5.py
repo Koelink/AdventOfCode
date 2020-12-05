@@ -11,14 +11,11 @@ def get_seat_id(data):
 
 
 def get_own_id(seat_list):
-    for i in range(max(seat_list)):
-        if i not in seat_list:
-            if i - 1 in seat_list and i + 1 in seat_list:
-                return i
+    return [seat_list[i] + 1 for i in range(len(seat_list) -1) if seat_list[i + 1] - seat_list[i] == 2][0]
 
-
+ 
 def get_puzzle_answer(data):
-    seat_list = [get_seat_id(x) for x in data]
+    seat_list = sorted([get_seat_id(x) for x in data])
     answer_1 = max(seat_list)
     answer_2 = get_own_id(seat_list)
     return answer_1, answer_2
