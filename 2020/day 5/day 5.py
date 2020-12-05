@@ -10,8 +10,8 @@ def get_seat_id(data):
     return int("".join(["1" if i in "RB" else "0" for i in data]), 2)
 
 
-def get_own_id(seat_list):
-    return [seat_list[i] + 1 for i in range(len(seat_list) -1) if seat_list[i + 1] - seat_list[i] == 2][0]
+def get_own_id(x):
+    return [x[i] + 1 for i in range(len(x) -1) if x[i + 1] - x[i] == 2][0]
 
  
 def get_puzzle_answer(data):
