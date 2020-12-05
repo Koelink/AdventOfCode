@@ -7,7 +7,7 @@ def get_file(file_name):
 
 
 def get_seat_id(data):
-    return int("".join(["1" if i in ["R", "B"] else "0" for i in data]), 2)
+    return int("".join(["1" if i in "RB" else "0" for i in data]), 2)
 
 
 def get_own_id(seat_list):
